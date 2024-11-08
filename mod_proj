@@ -1,0 +1,42 @@
+import todo_operations
+import utils
+
+tasks = []
+
+print("Welcome to Your Todo App")
+print("________________________")
+
+while True:
+    print("\n1. Add Task")
+    print("2. Delete Task by index")
+    print("3. View Tasks")
+    print("4. Clear Screen")
+    print("5. Exit")
+    
+    choice = input('Your Choice: ').strip()
+
+    match choice:
+        case '1':
+            new_task = input("Enter a new task: ")
+            todo_operations.add_task(tasks, new_task)
+
+        case '2':  
+            index = input("Enter the index of task to delete: ")
+            try:
+                index = int(index)
+                todo_operations.delete_task(tasks, index)
+            except ValueError:
+                print("Invalid index! Please enter a valid number.")
+        
+        case '3':
+            todo_operations.view_task(tasks)
+
+        case '4':
+             utils.clear_screen()
+
+        case '5':
+            print("Exiting the application...")
+            break
+        
+        case _:
+             print("Invalid Choice! Please try again.")

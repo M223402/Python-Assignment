@@ -1,0 +1,29 @@
+def classify_number():
+    # Loop to allow user to classify additional numbers until they type 'exit'
+    while True:
+        # Prompting the user to enter a number
+        user_input = input("Enter a number (or type 'exit' to quit): ").strip().lower()
+        
+        # Check if the user wants to exit the loop
+        if user_input == 'exit':
+            print("Exiting the program.")
+            break
+        
+        # Try to convert the input to an integer
+        try:
+            number = int(user_input)
+            
+            # Classify the number based on its value
+            if number > 0:
+                print("The number is positive.")
+            elif number < 0:
+                print("The number is negative.")
+            else:
+                print("The number is zero.")
+        
+        # Handle invalid input if it can't be converted to an integer
+        except ValueError:
+            print("Invalid input! Please enter a valid number.")
+    
+# Calling the function to start the classification process
+classify_number()

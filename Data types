@@ -1,0 +1,22 @@
+# Defining primitive data types
+data_int = 42              # Integer
+data_float = 7.5           # Float
+data_str = 'Manjila'          # String
+data_bool = False          # Boolean
+
+# Performing operations on each data type and printing results
+print(data_int + 5)        # Arithmetic operation on int
+print(data_float + 2.5)    # Arithmetic operation on float
+print(data_str + ' Silwal')  # String concatenation
+print(data_bool and True)  # Logical operation
+
+# Storing variables in a dictionary with their type as keys
+data_dict = {
+    'int': data_int, 
+    'float': data_float, 
+    'str': data_str, 
+    'bool': data_bool
+}
+
+# Displaying the dictionary with data types and their corresponding values
+print(data_dict)
